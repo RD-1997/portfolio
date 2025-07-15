@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: my-webpage
-          image: my-webpage:latest
-          imagePullPolicy: Never
+          image: image: harbor.rmsd.cloud/my-project/my-webpage:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
 

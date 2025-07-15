@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-webpage
+  labels:
+    app: my-webpage
 spec:
   replicas: 1
   selector:
@@ -14,8 +16,8 @@ spec:
     spec:
       containers:
         - name: my-webpage
-          image: image: harbor.rmsd.cloud/my-project/my-webpage:latest
-          imagePullPolicy: IfNotPresent
+          image: harbor.rmsd.cloud/my-project/my-webpage:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
 
